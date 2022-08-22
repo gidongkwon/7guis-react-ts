@@ -3,8 +3,8 @@ import { ChangeEventHandler, useReducer } from 'react';
 import styles from './TempConverter.module.css';
 
 type Temperatures = {
-  fahrenheit: string | undefined;
-  celcius: string | undefined;
+  fahrenheit: string;
+  celcius: string;
 }
 
 type TemperaturesReducerAction = {
@@ -15,19 +15,19 @@ type TemperaturesReducerAction = {
   fahrenheitString: string;
 }
 
-function isEmpty(inputValue: string | undefined) {
-  return inputValue?.trim().length === 0;
+function isEmpty(inputValue: string) {
+  return inputValue.trim().length === 0;
 }
 
-function isNumeric(inputValue: string | undefined) {
+function isNumeric(inputValue: string) {
   return !isEmpty(inputValue) && !isNaN(Number(inputValue));
 }
 
-function isInputInvalidAndFilled(inputValue: string | undefined) {
+function isInputInvalidAndFilled(inputValue: string) {
   return !isNumeric(inputValue) && !isEmpty(inputValue);
 }
 
-function isUpdateBlocked(inputValue: string | undefined, other: string | undefined) {
+function isUpdateBlocked(inputValue: string, other: string) {
   return !isEmpty(other) && (!isNumeric(inputValue) || isEmpty(inputValue));
 }
 
@@ -67,7 +67,7 @@ function temperaturesReducer(state: Temperatures, action: TemperaturesReducerAct
 }
 
 export const TempConverter = () => {
-  const [{ fahrenheit, celcius }, dispatch] = useReducer(temperaturesReducer, { celcius: undefined, fahrenheit: undefined });
+  const [{ fahrenheit, celcius }, dispatch] = useReducer(temperaturesReducer, { celcius: '', fahrenheit: '' });
 
   const handleCelciusChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     dispatch({
