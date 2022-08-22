@@ -1,0 +1,9 @@
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container input[aria-invalid="true"] {
+  background-color: red;
+}
