@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "elapsed-label elapsed-progress"
+  ". elapsed-seconds"
+  "duration-label duration-input"
+  "reset-button reset-button";
+  gap: 8px;
+}
+
+.elapsed-progress {
+  grid-area: elapsed-progress;
+  width: unset;
+}
+.elapsed-label {
+  grid-area: elapsed-label;
+  justify-self: start;
+}
+.elapsed-seconds {
+  grid-area: elapsed-seconds;
+  justify-self: start;
+}
+.duration-label {
+  grid-area: duration-label;
+  justify-self: start;
+}
+.duration-input {
+  grid-area: duration-input;
+}
+.reset-button {
+  grid-area: reset-button;
+}

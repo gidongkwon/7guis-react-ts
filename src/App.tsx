@@ -2,6 +2,7 @@ import './App.css'
 import { Counter } from './counter/Counter'
 import { FlightBooker } from './flight-booker/FlightBooker'
 import { TempConverter } from './temp-converter/TempConverter'
+import { Timer } from './timer/Timer'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Counter />
       <TempConverter />
       <FlightBooker />
+      <Timer />
     </div>
   )
 }
