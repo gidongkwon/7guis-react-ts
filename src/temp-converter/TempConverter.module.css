@@ -10,10 +10,9 @@
   align-items: center;
 }
 
-.container input[aria-invalid="true"] {
-  background-color: red;
-}
-
 .container input[data-update-blocked="true"] {
   background-color: gray;
+}
+.container input[aria-invalid="true"] {
+  background-color: red;
 }
