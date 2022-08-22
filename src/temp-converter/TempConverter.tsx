@@ -88,10 +88,11 @@ export const TempConverter = () => {
       <section>
         <input
           id='celcius'
-          onChange={handleCelciusChange}
+          inputMode='decimal'
           value={celcius}
           aria-invalid={isInputInvalidAndFilled(celcius)}
           data-update-blocked={isUpdateBlocked(fahrenheit, celcius)}
+          onChange={handleCelciusChange}
         />
         <label htmlFor='celcius'>Celcius</label>
       </section>
@@ -99,10 +100,11 @@ export const TempConverter = () => {
       <section>
         <input
           id='fahrenheit'
-          onChange={handleFahrenheitChange}
+          inputMode='decimal'
           value={fahrenheit}
           aria-invalid={isInputInvalidAndFilled(fahrenheit)}
           data-update-blocked={isUpdateBlocked(celcius, fahrenheit)}
+          onChange={handleFahrenheitChange}
         />
         <label htmlFor='fahrenheit'>Fahrenheit</label>
       </section>
