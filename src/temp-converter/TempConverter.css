@@ -1,0 +1,19 @@
+.temperature-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.temperature section {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.temperature input[aria-invalid="true"] {
+  background-color: red;
+}
+
+.temperature input[data-update-blocked="true"] {
+  background-color: gray;
+}
