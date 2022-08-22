@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import './Counter.css';
+import classes from './Counter.module.css';
+import clsx from 'clsx';
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
   return (
-    <div className='card counter-container'>
+    <article className={clsx('card', classes.container)}>
       {count}
       <button onClick={() => setCount(count + 1)}>
         Count
       </button>
-    </div>
+    </article>
   )
 }

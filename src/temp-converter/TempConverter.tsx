@@ -1,5 +1,6 @@
+import clsx from 'clsx';
 import { ChangeEventHandler, useReducer } from 'react';
-import './TempConverter.css';
+import styles from './TempConverter.module.css';
 
 type Temperatures = {
   fahrenheit: string | undefined;
@@ -83,7 +84,7 @@ export const TempConverter = () => {
   }
 
   return (
-    <div className='temperature card temperature-container'>
+    <article className={clsx('card', styles.container)}>
       <section>
         <input
           id='celcius'
@@ -105,6 +106,6 @@ export const TempConverter = () => {
         />
         <label htmlFor='fahrenheit'>Fahrenheit</label>
       </section>
-    </div>
+    </article>
   )
 }
